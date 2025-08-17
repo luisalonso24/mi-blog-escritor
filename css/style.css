@@ -1,0 +1,139 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ====== VARIABLES ====== */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-accent: #6c63ff;
+  --color-header: #f5f5f5;
+}
+
+body.dark-mode {
+  --color-bg: #111111;
+  --color-text: #f5f5f5;
+  --color-header: #222222;
+}
+
+/* ====== BODY ====== */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ====== HEADER ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-header);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+header nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: var(--color-accent);
+}
+
+#dark-mode-toggle {
+  margin-left: 1rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: opacity 0.3s;
+}
+
+#dark-mode-toggle:hover {
+  opacity: 0.8;
+}
+
+/* ====== HERO ====== */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #6c63ff, #b18aff);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #fff;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-header);
+  color: var(--color-text);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav {
+    margin-top: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
